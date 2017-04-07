@@ -1,0 +1,907 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/Belphemur/node-json-db"
+
+    >node-json-db (v0.7.3)</a>
+</h1>
+<h4>Database using JSON file as storage for Node.JS</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-json-db">module node-json-db</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-json-db.ArrayInfo">
+            function <span class="apidocSignatureSpan">node-json-db.</span>ArrayInfo
+            <span class="apidocSignatureSpan">(property, index)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-json-db.DBParentData">
+            function <span class="apidocSignatureSpan">node-json-db.</span>DBParentData
+            <span class="apidocSignatureSpan">(parent, data, jsonDB, dataPath)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">node-json-db.</span>ArrayInfo.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">node-json-db.</span>DBParentData.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">node-json-db.</span>Errors</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">node-json-db.</span>utils</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-json-db.ArrayInfo">module node-json-db.ArrayInfo</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-json-db.ArrayInfo.ArrayInfo">
+            function <span class="apidocSignatureSpan">node-json-db.</span>ArrayInfo
+            <span class="apidocSignatureSpan">(property, index)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-json-db.ArrayInfo.prototype">module node-json-db.ArrayInfo.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-json-db.ArrayInfo.prototype.delete">
+            function <span class="apidocSignatureSpan">node-json-db.ArrayInfo.prototype.</span>delete
+            <span class="apidocSignatureSpan">(data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-json-db.ArrayInfo.prototype.getData">
+            function <span class="apidocSignatureSpan">node-json-db.ArrayInfo.prototype.</span>getData
+            <span class="apidocSignatureSpan">(data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-json-db.ArrayInfo.prototype.getIndex">
+            function <span class="apidocSignatureSpan">node-json-db.ArrayInfo.prototype.</span>getIndex
+            <span class="apidocSignatureSpan">(data, avoidProperty)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-json-db.ArrayInfo.prototype.isValid">
+            function <span class="apidocSignatureSpan">node-json-db.ArrayInfo.prototype.</span>isValid
+            <span class="apidocSignatureSpan">(data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-json-db.ArrayInfo.prototype.setData">
+            function <span class="apidocSignatureSpan">node-json-db.ArrayInfo.prototype.</span>setData
+            <span class="apidocSignatureSpan">(data, value)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-json-db.DBParentData">module node-json-db.DBParentData</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-json-db.DBParentData.DBParentData">
+            function <span class="apidocSignatureSpan">node-json-db.</span>DBParentData
+            <span class="apidocSignatureSpan">(parent, data, jsonDB, dataPath)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-json-db.DBParentData.prototype">module node-json-db.DBParentData.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-json-db.DBParentData.prototype._checkArray">
+            function <span class="apidocSignatureSpan">node-json-db.DBParentData.prototype.</span>_checkArray
+            <span class="apidocSignatureSpan">(deletion)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-json-db.DBParentData.prototype.delete">
+            function <span class="apidocSignatureSpan">node-json-db.DBParentData.prototype.</span>delete
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-json-db.DBParentData.prototype.getData">
+            function <span class="apidocSignatureSpan">node-json-db.DBParentData.prototype.</span>getData
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-json-db.DBParentData.prototype.setData">
+            function <span class="apidocSignatureSpan">node-json-db.DBParentData.prototype.</span>setData
+            <span class="apidocSignatureSpan">(toSet)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-json-db.Errors">module node-json-db.Errors</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-json-db.Errors.DataError">
+            function <span class="apidocSignatureSpan">node-json-db.Errors.</span>DataError
+            <span class="apidocSignatureSpan">(msg, id, nested)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-json-db.Errors.DatabaseError">
+            function <span class="apidocSignatureSpan">node-json-db.Errors.</span>DatabaseError
+            <span class="apidocSignatureSpan">(msg, id, nested)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.node-json-db.utils">module node-json-db.utils</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-json-db.utils.mergeObject">
+            function <span class="apidocSignatureSpan">node-json-db.utils.</span>mergeObject
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-json-db.utils.processArray">
+            function <span class="apidocSignatureSpan">node-json-db.utils.</span>processArray
+            <span class="apidocSignatureSpan">(property)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-json-db.utils.removeTrailingSlash">
+            function <span class="apidocSignatureSpan">node-json-db.utils.</span>removeTrailingSlash
+            <span class="apidocSignatureSpan">(dataPath)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.node-json-db.utils.strEndWith">
+            function <span class="apidocSignatureSpan">node-json-db.utils.</span>strEndWith
+            <span class="apidocSignatureSpan">(str, suffix)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-json-db" id="apidoc.module.node-json-db">module node-json-db</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-json-db.ArrayInfo" id="apidoc.element.node-json-db.ArrayInfo">
+        function <span class="apidocSignatureSpan">node-json-db.</span>ArrayInfo
+        <span class="apidocSignatureSpan">(property, index)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ArrayInfo(property, index) {
+    this.property = property;
+    this.index = index;
+    this.append = index === &#x22;&#x22;;
+    if (isInt(this.index)) {
+        this.index = parseInt(this.index);
+    } else if (!this.append) {
+        throw new DataError(&#x22;Only numerical values accepted for array index&#x22;, 200)
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-json-db.DBParentData" id="apidoc.element.node-json-db.DBParentData">
+        function <span class="apidocSignatureSpan">node-json-db.</span>DBParentData
+        <span class="apidocSignatureSpan">(parent, data, jsonDB, dataPath)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function DBParentData(parent, data, jsonDB, dataPath) {
+    this.parent = parent;
+    this.data = data;
+    this.db = jsonDB;
+    this.dataPath = dataPath;
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-json-db.ArrayInfo" id="apidoc.module.node-json-db.ArrayInfo">module node-json-db.ArrayInfo</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-json-db.ArrayInfo.ArrayInfo" id="apidoc.element.node-json-db.ArrayInfo.ArrayInfo">
+        function <span class="apidocSignatureSpan">node-json-db.</span>ArrayInfo
+        <span class="apidocSignatureSpan">(property, index)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ArrayInfo(property, index) {
+    this.property = property;
+    this.index = index;
+    this.append = index === &#x22;&#x22;;
+    if (isInt(this.index)) {
+        this.index = parseInt(this.index);
+    } else if (!this.append) {
+        throw new DataError(&#x22;Only numerical values accepted for array index&#x22;, 200)
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-json-db.ArrayInfo.prototype" id="apidoc.module.node-json-db.ArrayInfo.prototype">module node-json-db.ArrayInfo.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-json-db.ArrayInfo.prototype.delete" id="apidoc.element.node-json-db.ArrayInfo.prototype.delete">
+        function <span class="apidocSignatureSpan">node-json-db.ArrayInfo.prototype.</span>delete
+        <span class="apidocSignatureSpan">(data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">delete = function (data) {
+    var index = this.getIndex(data);
+    data[this.property].splice(index, 1);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+} catch(error) {
+//The error will tell you where the DataPath stopped. In this case test1
+//Since /test1/test does&#x27;t exist.
+    console.error(error);
+}
+
+//Deleting data
+db.<span class="apidocCodeKeywordSpan">delete</span>(&#x22;/test1&#x22;);
+
+//Save the data (useful if you disable the saveOnPush)
+db.save();
+
+//In case you have a exterior change to the databse file and want to reload it
+//use this method
+db.reload();
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-json-db.ArrayInfo.prototype.getData" id="apidoc.element.node-json-db.ArrayInfo.prototype.getData">
+        function <span class="apidocSignatureSpan">node-json-db.ArrayInfo.prototype.</span>getData
+        <span class="apidocSignatureSpan">(data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getData = function (data) {
+    if (this.append) {
+        throw new DataError(&#x22;Can&#x27;t get data when appending&#x22;, 100);
+    }
+    var index = this.getIndex(data);
+    return data[this.property][index];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+*/
+//You can&#x27;t merge primitive.
+//If you do this:
+db.push(&#x22;/test2/my/test/&#x22;,10,false);
+//the data will be overriden
+
+//Get the data from the root
+var data = db.<span class="apidocCodeKeywordSpan">getData</span>(&#x22;/&#x22;);
+
+//From a particular DataPath
+var data = db.getData(&#x22;/test1&#x22;);
+
+//If you try to get some data from a DataPath that doesn&#x27;t exists
+//You&#x27;ll get an Error
+try {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-json-db.ArrayInfo.prototype.getIndex" id="apidoc.element.node-json-db.ArrayInfo.prototype.getIndex">
+        function <span class="apidocSignatureSpan">node-json-db.ArrayInfo.prototype.</span>getIndex
+        <span class="apidocSignatureSpan">(data, avoidProperty)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getIndex = function (data, avoidProperty) {
+    if (avoidProperty === undefined) {
+        avoidProperty = false;
+    }
+    var index = this.index;
+    if (index == -1) {
+        var dataIterable = avoidProperty ? data : data[this.property];
+
+        if (dataIterable.length === 0) {
+            return 0;
+        }
+        return dataIterable.length - 1;
+    }
+    return index;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @returns {*}
+ * @constructor
+ */
+ArrayInfo.prototype.getData = function (data) {
+    if (this.append) {
+        throw new DataError(&#x22;Can&#x27;t get data when appending&#x22;, 100);
+    }
+    var index = this.<span class="apidocCodeKeywordSpan">getIndex</span>(data);
+    return data[this.property][index];
+};
+
+/**
+ * Set the data for the array
+ * @param data
+ * @param value
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-json-db.ArrayInfo.prototype.isValid" id="apidoc.element.node-json-db.ArrayInfo.prototype.isValid">
+        function <span class="apidocSignatureSpan">node-json-db.ArrayInfo.prototype.</span>isValid
+        <span class="apidocSignatureSpan">(data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isValid = function (data) {
+    var index = this.getIndex(data);
+    return data[this.property].hasOwnProperty(index);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ */
+DBParentData.prototype._checkArray = function (deletion) {
+    if(typeof deletion === undefined) {
+        deletion = false;
+    }
+    var arrayInfo = JsonUtils.processArray(this.parent);
+    if (arrayInfo) {
+        if ((!arrayInfo.append || deletion) &#x26;&#x26; !arrayInfo.<span class="apidocCodeKeywordSpan">isValid</span>(this.data
+)) {
+            throw new DataError(&#x22;DataPath: /&#x22; + this.dataPath + &#x22;. Can&#x27;t find index &#x22; + arrayInfo.index
+ + &#x22; in array &#x22; + arrayInfo.property, 10);
+        }
+    }
+    return arrayInfo;
+};
+
+DBParentData.prototype.getData = function () {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-json-db.ArrayInfo.prototype.setData" id="apidoc.element.node-json-db.ArrayInfo.prototype.setData">
+        function <span class="apidocSignatureSpan">node-json-db.ArrayInfo.prototype.</span>setData
+        <span class="apidocSignatureSpan">(data, value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setData = function (data, value) {
+    if (this.append) {
+        data[this.property].push(value);
+    } else {
+        var index = this.getIndex(data);
+        data[this.property][index] = value;
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    var arrayInfo = JsonUtils.processArray(this.parent);
+    if (arrayInfo) {
+        if (!this.data.hasOwnProperty(arrayInfo.property)) {
+            this.data[arrayInfo.property] = [];
+        } else if (!Array.isArray(this.data[arrayInfo.property])) {
+            throw new DataError(&#x22;DataPath: /&#x22; + this.dataPath + &#x22;. &#x22; + arrayInfo.property + &#x22; is not an
+ array.&#x22;, 11);
+        }
+        arrayInfo.<span class="apidocCodeKeywordSpan">setData</span>(this.data, toSet);
+    } else {
+        this.data[this.parent] = toSet;
+    }
+};
+
+DBParentData.prototype.delete = function () {
+    if (this.parent === undefined) {
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-json-db.DBParentData" id="apidoc.module.node-json-db.DBParentData">module node-json-db.DBParentData</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-json-db.DBParentData.DBParentData" id="apidoc.element.node-json-db.DBParentData.DBParentData">
+        function <span class="apidocSignatureSpan">node-json-db.</span>DBParentData
+        <span class="apidocSignatureSpan">(parent, data, jsonDB, dataPath)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function DBParentData(parent, data, jsonDB, dataPath) {
+    this.parent = parent;
+    this.data = data;
+    this.db = jsonDB;
+    this.dataPath = dataPath;
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-json-db.DBParentData.prototype" id="apidoc.module.node-json-db.DBParentData.prototype">module node-json-db.DBParentData.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-json-db.DBParentData.prototype._checkArray" id="apidoc.element.node-json-db.DBParentData.prototype._checkArray">
+        function <span class="apidocSignatureSpan">node-json-db.DBParentData.prototype.</span>_checkArray
+        <span class="apidocSignatureSpan">(deletion)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_checkArray = function (deletion) {
+    if(typeof deletion === undefined) {
+        deletion = false;
+    }
+    var arrayInfo = JsonUtils.processArray(this.parent);
+    if (arrayInfo) {
+        if ((!arrayInfo.append || deletion) &#x26;&#x26; !arrayInfo.isValid(this.data)) {
+            throw new DataError(&#x22;DataPath: /&#x22; + this.dataPath + &#x22;. Can&#x27;t find index &#x22; + arrayInfo.index + &#x22; in array &#x22; + arrayInfo
+.property, 10);
+        }
+    }
+    return arrayInfo;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    return arrayInfo;
+};
+
+DBParentData.prototype.getData = function () {
+    if (this.parent === undefined) {
+        return this.data;
+    }
+    var arrayInfo = this.<span class="apidocCodeKeywordSpan">_checkArray</span>();
+    if (arrayInfo) {
+        return arrayInfo.getData(this.data);
+    } else {
+        return this.data[this.parent];
+    }
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-json-db.DBParentData.prototype.delete" id="apidoc.element.node-json-db.DBParentData.prototype.delete">
+        function <span class="apidocSignatureSpan">node-json-db.DBParentData.prototype.</span>delete
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">delete = function () {
+    if (this.parent === undefined) {
+        this.db.data = {};
+    }
+    var arrayInfo = this._checkArray(true);
+    if (arrayInfo) {
+        arrayInfo.delete(this.data);
+    } else {
+        delete this.data[this.parent];
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+} catch(error) {
+//The error will tell you where the DataPath stopped. In this case test1
+//Since /test1/test does&#x27;t exist.
+    console.error(error);
+}
+
+//Deleting data
+db.<span class="apidocCodeKeywordSpan">delete</span>(&#x22;/test1&#x22;);
+
+//Save the data (useful if you disable the saveOnPush)
+db.save();
+
+//In case you have a exterior change to the databse file and want to reload it
+//use this method
+db.reload();
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-json-db.DBParentData.prototype.getData" id="apidoc.element.node-json-db.DBParentData.prototype.getData">
+        function <span class="apidocSignatureSpan">node-json-db.DBParentData.prototype.</span>getData
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getData = function () {
+    if (this.parent === undefined) {
+        return this.data;
+    }
+    var arrayInfo = this._checkArray();
+    if (arrayInfo) {
+        return arrayInfo.getData(this.data);
+    } else {
+        return this.data[this.parent];
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+*/
+//You can&#x27;t merge primitive.
+//If you do this:
+db.push(&#x22;/test2/my/test/&#x22;,10,false);
+//the data will be overriden
+
+//Get the data from the root
+var data = db.<span class="apidocCodeKeywordSpan">getData</span>(&#x22;/&#x22;);
+
+//From a particular DataPath
+var data = db.getData(&#x22;/test1&#x22;);
+
+//If you try to get some data from a DataPath that doesn&#x27;t exists
+//You&#x27;ll get an Error
+try {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-json-db.DBParentData.prototype.setData" id="apidoc.element.node-json-db.DBParentData.prototype.setData">
+        function <span class="apidocSignatureSpan">node-json-db.DBParentData.prototype.</span>setData
+        <span class="apidocSignatureSpan">(toSet)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setData = function (toSet) {
+    if (this.parent === undefined) {
+        this.db.data = toSet;
+        return;
+    }
+    var arrayInfo = JsonUtils.processArray(this.parent);
+    if (arrayInfo) {
+        if (!this.data.hasOwnProperty(arrayInfo.property)) {
+            this.data[arrayInfo.property] = [];
+        } else if (!Array.isArray(this.data[arrayInfo.property])) {
+            throw new DataError(&#x22;DataPath: /&#x22; + this.dataPath + &#x22;. &#x22; + arrayInfo.property + &#x22; is not an array.&#x22;, 11);
+        }
+        arrayInfo.setData(this.data, toSet);
+    } else {
+        this.data[this.parent] = toSet;
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    var arrayInfo = JsonUtils.processArray(this.parent);
+    if (arrayInfo) {
+        if (!this.data.hasOwnProperty(arrayInfo.property)) {
+            this.data[arrayInfo.property] = [];
+        } else if (!Array.isArray(this.data[arrayInfo.property])) {
+            throw new DataError(&#x22;DataPath: /&#x22; + this.dataPath + &#x22;. &#x22; + arrayInfo.property + &#x22; is not an
+ array.&#x22;, 11);
+        }
+        arrayInfo.<span class="apidocCodeKeywordSpan">setData</span>(this.data, toSet);
+    } else {
+        this.data[this.parent] = toSet;
+    }
+};
+
+DBParentData.prototype.delete = function () {
+    if (this.parent === undefined) {
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-json-db.Errors" id="apidoc.module.node-json-db.Errors">module node-json-db.Errors</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-json-db.Errors.DataError" id="apidoc.element.node-json-db.Errors.DataError">
+        function <span class="apidocSignatureSpan">node-json-db.Errors.</span>DataError
+        <span class="apidocSignatureSpan">(msg, id, nested)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function DataError(msg, id, nested) {
+    var error = NestedError.call(this, msg, id, nested);
+    error.name = &#x27;DataError&#x27;;
+    return error;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-json-db.Errors.DatabaseError" id="apidoc.element.node-json-db.Errors.DatabaseError">
+        function <span class="apidocSignatureSpan">node-json-db.Errors.</span>DatabaseError
+        <span class="apidocSignatureSpan">(msg, id, nested)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function DatabaseError(msg, id, nested) {
+    var error = NestedError.call(this, msg, id, nested);
+    error.name = &#x27;DatabaseError&#x27;;
+    return error;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.node-json-db.utils" id="apidoc.module.node-json-db.utils">module node-json-db.utils</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-json-db.utils.mergeObject" id="apidoc.element.node-json-db.utils.mergeObject">
+        function <span class="apidocSignatureSpan">node-json-db.utils.</span>mergeObject
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">mergeObject = function () {
+    var destination = {},
+        sources = [].slice.call(arguments, 0);
+    sources.forEach(function (source) {
+        var prop;
+        for (prop in source) {
+
+            if (prop in destination &#x26;&#x26; destination[prop] === null) {
+                destination[prop] = source[prop];
+            }
+            else if (prop in destination &#x26;&#x26; Array.isArray(destination[prop])) {
+
+                // Concat Arrays
+                destination[prop] = destination[prop].concat(source[prop]);
+
+            } else if (prop in destination &#x26;&#x26; typeof destination[prop] === &#x22;object&#x22;) {
+
+                // Merge Objects
+                destination[prop] = merge(destination[prop], source[prop]);
+
+            } else {
+
+                // Set new values
+                destination[prop] = source[prop];
+
+            }
+        }
+    });
+    return destination;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-json-db.utils.processArray" id="apidoc.element.node-json-db.utils.processArray">
+        function <span class="apidocSignatureSpan">node-json-db.utils.</span>processArray
+        <span class="apidocSignatureSpan">(property)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">processArray = function (property) {
+    var match = arrayIndexRegex.exec(property);
+    if (match != null) {
+        return new ArrayInfo(match[1], match[2]);
+    }
+    return null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @returns {ArrayInfo}
+ * @private
+ */
+DBParentData.prototype._checkArray = function (deletion) {
+    if(typeof deletion === undefined) {
+        deletion = false;
+    }
+    var arrayInfo = JsonUtils.<span class="apidocCodeKeywordSpan">processArray</span>(this.parent);
+    if (arrayInfo) {
+        if ((!arrayInfo.append || deletion) &#x26;&#x26; !arrayInfo.isValid(this.data)) {
+            throw new DataError(&#x22;DataPath: /&#x22; + this.dataPath + &#x22;. Can&#x27;t find index &#x22; + arrayInfo.index
+ + &#x22; in array &#x22; + arrayInfo.property, 10);
+        }
+    }
+    return arrayInfo;
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-json-db.utils.removeTrailingSlash" id="apidoc.element.node-json-db.utils.removeTrailingSlash">
+        function <span class="apidocSignatureSpan">node-json-db.utils.</span>removeTrailingSlash
+        <span class="apidocSignatureSpan">(dataPath)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function removeTrailingSlash(dataPath) {
+    if(dataPath.length &#x3e; 1 &#x26;&#x26; endsWith(dataPath,&#x22;/&#x22;)) {
+        return dataPath.substring(0, dataPath.length - 1);
+    }
+    return dataPath;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.node-json-db.utils.strEndWith" id="apidoc.element.node-json-db.utils.strEndWith">
+        function <span class="apidocSignatureSpan">node-json-db.utils.</span>strEndWith
+        <span class="apidocSignatureSpan">(str, suffix)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">strEndWith = function (str, suffix) {
+    return str.indexOf(suffix, str.length - suffix.length) !== -1;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
